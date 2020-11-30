@@ -5,5 +5,13 @@ function GetIPConfirm {
         $IPAddress
         $NSLookupName = nslookup $IPAddress | Select-Object Name 
         $NSLookupName
+        if ($PCName -ne $NSLookupName) {
+            Write-Host "DNS has not been updated with the current IP Address"
+        }
+        else {
+            $PCName
+            $IPAddress
+            $NSLookupName
+        }
     }
 }
