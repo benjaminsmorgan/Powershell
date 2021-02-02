@@ -4,7 +4,7 @@ function SelectFromList { # Selects from List
             $ObjectList = Get-Command # Gets a list
             $ObjectListNumber = 1 # $Var for setting $ObjectList.Number
             foreach ($_ in $ObjectList) { # For each item in $ObjectList
-                $_ | Add-Member -NotePropertyName 'Number' -NotePropertyValue $ObjectListNumber # Addes number property to each item in list
+                $_ | Add-Member -NotePropertyName 'Number' -NotePropertyValue $ObjectListNumber # Adds number property to each item in list
                 $ObjectListNumber = $ObjectListNumber + 1 # Increments $ObjectListNumber by 1
             } # End foreach ($_ in $ObjectList)
             Write-Host "0 Exit" # Write message to screen
